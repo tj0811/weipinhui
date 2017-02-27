@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../frame/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/vip.css"/>
+    <script src="../frame/jquery/jquery-3.1.1.min.js"></script>
+    <script src="../frame/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../frame/holder/holder.min.js"></script>
+    <script src="../js/sportFrame.js"></script>
+    <script src="../js/vip_01.js"></script>
+    <script src="../js/vip.js"></script>
+
+    <script>
+        $(function(){
+            var oRoll=document.getElementById('roll');
+            var oUl=oRoll.getElementsByTagName('ul')[0];
+            var aImg=oUl.getElementsByTagName('img');
+
+            lunboqi(oUl,aImg);
+        });
+
+        $(function(){
+            var oPoh=document.getElementsByClassName('poh02')[0];
+            var divimg=document.getElementById('divimg');
+            var aMove=document.getElementsByClassName('move01');
+            var aImg02=divimg.getElementsByTagName('img');
+
+            for(var i=0;i<aImg02.length;i++)
+            {
+                aImg02[i].index=i;
+                aImg02[i].onmouseover=function(){
+                    sportFrame(aMove[this.index],'right',30);
+                }
+                aImg02[i].onmouseout=function(){
+                    sportFrame(aMove[this.index],'right',-100);
+                }
+            }
+
+        })
+
+
+    </script>
+</head>
+<body>
+<div class="container" style="width: 100% ;height: 30px;background: #F5F5F5">
+    <div class="row font01">
+        <div class="col-md-1" ></div>
+
+        <div class="col-md-1">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" data-toggle="dropdown" style="width:80px;height: 30px;background:#F5F5F5;margin-top: -3px;color: #000000">
+                    广东<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header"><a href="">请选择收货地址</a></li>
+                    <li class="divider"></li>
+                    <li><a href="">深圳</a></li>
+                    <li><a href="">上海</a></li>
+                    <li><a href="">北京</a></li>
+                    <li><a href="">西安</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-1" ></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" data-toggle="dropdown" style=" width:80px;height: 30px;background:#F5F5F5;margin-top:-3px;color: #000000">
+                    请登陆 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header"><a href="#"></a></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-1" style="margin-top: 6px">
+            <a href="#">注册</a>
+            <span>/</span>
+        </div>
+        <div class="col-md-1" style="margin-top: 6px">
+            <a href="#">我的订单</a>
+            <span>/</span>
+        </div>
+        <div class="col-md-1">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" data-toggle="dropdown" style="width:80px;height: 30px;background:#F5F5F5;margin-top: -3px;color: #000000">
+                    我的收藏<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header"><a href=""></a></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" data-toggle="dropdown" style="width:80px;height: 30px;background:#F5F5F5;margin-top:-3px;color: #000000">
+                    会员俱乐部<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header"><a href=""></a></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" data-toggle="dropdown" style="width:80px;height: 30px;background:#F5F5F5;margin-top: -3px;color: #000000">
+                    客户服务<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header"><a href=""></a></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" data-toggle="dropdown" style=" width:80px;height: 30px;background:#F5F5F5;margin-top:-3px;color: #000000">
+                    更多<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header"><a href=""></a></li>
+                    <li class="divider"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="font02">
+    <div class="font02_1">
+        <img src="../images/main/1481820328776.png" style="width: 250px;height: 100px;"/>
+    </div>
+    <div class="font02_2">
+        <img src="../images/main/1466131264367.png" style="width: 120px;height: 100px;"/>
+        <img src="../images/main/1466131266290.png" style="width: 120px;height: 100px;"/>
+        <img src="../images/main/1466131268726.png" style="width: 120px;height: 100px;"/>
+    </div>
+
+</div>
+<!--分类导航-->
+<nav class="mian-nav">
+    <div class="font04">
+        <div class="header">
+            <ul>
+                <li class="ma01" ><a href="#">首页</a></li>
+                <li class="ma02" style="width: 110px;height: 37px;"><a href="#">唯品国际</a></li>
+                <li class="ma03"><a href="child.html">母婴</a></li>
+                <li class="ma04"><a href="#">居家</a></li>
+                <li class="ma05"><a href="#">男士</a></li>
+                <li class="ma06"><a href="#">美妆</a></li>
+                <li class="ma07"><a href="#">生活</a></li>
+                <li class="ma08"><a href="#">金融</a></li>
+                <li class="ma09">
+                    <a href="#">更多
+                        <i class="ico-dis icon-triangle"></i>
+                    </a>
+                    <div class="box01" >
+                        <img src="../images/main/14867291323273.jpg"/>
+                        <img src="../images/main/14867291118516.jpg"/>
+                        <img src="../images/main/14867290649207.jpg"/>
+                        <img src="../images/main/14867290649207.jpg"/>
+                        <img src="../images/main/14867291323273.jpg"/>
+                        <img src="../images/main/14867291118516.jpg"/>
+                        <img src="../images/main/14867290649207.jpg"/>
+                        <img src="../images/main/14867290649207.jpg"/>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--轮播-->
+<div class="lunbo">
+    <div id="roll">
+        <ul>
+            <li><img src="../images/main/14864585779097.jpg"/></li>
+            <li><img src="../images/main/14844515726738.jpg"/></li>
+            <li><img src="../images/main/14867219606682.jpg"/></li>
+        </ul>
+    </div>
+</div>
+    <div class="font06">
+        <img src="../images/main/14844520262395.png" style="width: 998px ;height: 150px;"/>
+    </div>
+<div class="font07">
+    <span class="font07_1">新特卖</span>每日早10晚8上新 <br/>
+</div>
+<div class="font08"> <span style="font-size: 14px">TODAY'S DEALS BRAND</span></div>
+<!--悬浮导航-->
+<div class="fu_menu_left01">
+    <img src="../images/main/QQ20170217101322.png" />
+    <img src="../images/main/QQ20170217101418.jpg" >
+    <img src="../images/main/QQ20170217101423.jpg" />
+</div>
+<div class="fu_menu_left02">
+    <ul>
+        <li class="left01"><a href="#"></a></li>
+        <li class="left02"><a href="#"></a></li>
+        <li class="left03"><a href="#"><img src="../images/main/36020170213163128453.jpg"/></a></li>
+        <li class="left04"><a href="#"><img src="../images/main/36020170213163201045.jpg"/></a></li>
+        <li class="left05"><a href="#"><img src="../images/main/36020170213163259581.jpg"/></a></li>
+        <li class="left06"><a href="#"><img src="../images/main/36020170213163332940.jpg"/></a></li>
+        <li class="left07"><a href="#"><img src="../images/main/36020170213163427468.jpg"/></a></li>
+        <li class="left08"><a href="#"><img src="../images/main/36020170213163715859.jpg"/></a></li>
+        <li class="left09"><a href="#"><img src="../images/main/36020170213163811861.jpg"/></a></li>
+        <li class="left10"><a href="#"><img src="../images/main/36020170213163849993.jpg"/></a></li>
+        <li class="left11"><a href="#"><img src="../images/main/36020170213163932401.jpg"/></a></li>
+    </ul>
+</div>
+<div class="fu_menu_right">
+    <div class="poh02">
+        <img src="../images/main/QQ20170218131931.png" style="width: 22px"/><span style="font-size: 12px; margin-left: 3px;"><a href="sign.html">账号</a> </span>
+        <div class="shopcar" style="width: 30px;height: 120px;background: #DF1680">
+            <img src="../images/main/QQ20170218132014.png"/>
+            <span style=" font-size: 16px; margin-left: 6px">购</span>
+            <span style=" font-size: 16px; margin-left: 6px">物</span>
+            <span style=" font-size: 16px; margin-left: 6px">袋</span>
+
+        </div>
+    <div id="divimg">
+        <img src="../images/main/QQ20170218132023.png" />
+        <img src="../images/main/QQ20170218132032.png" />
+        <img src="../images/main/QQ20170218132041.png" />
+        <img src="../images/main/QQ20170218132051.png"/>
+    </div>
+    </div>
+    <img src="../images/main/QQ20170218132103.png" />
+</div>
+<div class="move01" style="top: 290px;">我的优惠券</div>
+<div class="move01" style="top: 325px;">我收藏的品牌</div>
+<div class="move01" style="top: 360px;">我收藏的商品</div>
+<div class="move01" style="top: 400px;">我的足迹</div>
+<!--精选栏目-->
+<div class="choice">
+    <ul>
+        <li class="choice01">
+            <div class="choice_main">
+                <div class="choice_mainup">
+                    <div class="coat01"><img src="../images/main/1HY3341810650-5.jpg"/></div>
+                    <div class="coat02"><img src="../images/main/7391a359-b951-4104-a447-eee73fc2c906_t.jpg"/></div>
+                    <div class="coat03"><img src="../images/main/4M626027-88-5.jpg"/></div>
+                </div>
+                <div class="choice_maindown">
+                    <div class="coat04"><img src="../images/main/17377721.png" style="width: 78px;height: 40px"/></div>
+                    <a href="#" class="btn btn-danger"><img src="../images/main/36020170213164150769.jpg" style="width: 20px;height: 20px"/>收藏</a>
+                    <a href="#" class="btn btn01">进入会场</a>
+                </div>
+            </div>
+
+            <div class="choice_name name01"><span class="name_a" style="font-size: 20px">GANE stroy</span><br/><sapn>经典故事</sapn><span><br/>满599减30</span></div>
+            <a href="#"></a>
+        </li>
+        <li class="choice02">
+            <div class="choice_main1">
+                <div class="choice_mainup1">
+                    <div class="coat04 "><img src="../images/main/8568473011156-5.jpg"/></div>
+                    <div class="coat05 "><img src="../images/main/8568473011156-5.jpg"/></div>
+                    <div class="coat06 "><img src="../images/main/7391a359-b951-4104-a447-eee73fc2c906_t.jpg"/></div>
+                </div>
+                <div class="choice_maindown1">
+                    <div class="coat04"><img src="../images/main/17377721.png" style="width: 78px;height: 40px"/></div>
+                    <a href="#" class="btn btn-danger"><img src="../images/main/36020170213164150769.jpg" style="width: 20px;height: 20px"/>收藏</a>
+                    <a href="#" class="btn btn01">进入会场</a>
+                </div>
+            </div>
+            <div class="choice_name name02"><span class="name_a" style="font-size: 20px">七格格</span><br/><sapn>春装上市</sapn><span><br/>满599减30</span></div>
+            <a href="#"></a>
+        </li>
+        <li class="choice03">
+            <div class="choice_main2">
+                <div class="choice_mainup2">
+                    <div class="coat07 "><img src="../images/main/36245-32-5.jpg"/></div>
+                    <div class="coat08 "><img src="../images/main/36245-35-5.jpg"/></div>
+                    <div class="coat09 "><img src="../images/main/36247-32-5.jpg"/></div>
+                </div>
+                <div class="choice_maindown2">
+                    <div class="coat04"><img src="../images/main/17377721.png" style="width: 78px;height: 40px"/></div>
+                    <a href="#" class="btn btn-danger"><img src="../images/main/36020170213164150769.jpg" style="width: 20px;height: 20px"/>收藏</a>
+                    <a href="#" class="btn btn01">进入会场</a>
+                </div>
+            </div>
+            <div class="choice_name name03"><span class="name_a" style="font-size: 20px">GANE stroy</span><br/><sapn>经典故事</sapn><span><br/>满599减30</span></div>
+            <a href="#"></a>
+        </li>
+        <li class="choice04">
+            <div class="choice_main3">
+                <div class="choice_mainup3">
+                    <div class="coat10 "><img src="../images/main/8568473011156-5.jpg"/></div>
+                    <div class="coat11 "><img src="../images/main/f10d5fe6-4fe8-4b45-b344-6ef54c64c1c3_t.jpg"/></div>
+                    <div class="coat12 "><img src="../images/main/ERDOS-8350116423-5.jpg"/></div>
+                </div>
+                <div class="choice_maindown3">
+                    <div class="coat04"><img src="../images/main/17377721.png" style="width: 78px;height: 40px"/></div>
+                    <a href="#" class="btn btn-danger"><img src="../images/main/36020170213164150769.jpg" style="width: 20px;height: 20px"/>收藏</a>
+                    <a href="#" class="btn btn01">进入会场</a>
+                </div>
+            </div>
+            <div class="choice_name name04"><span class="name_a" style="font-size: 20px">GANE stroy</span><br/><sapn>经典故事</sapn><span><br/>满599减30</span></div>
+            <a href="#"></a>
+        </li>
+        <li class="choice05">
+            <div class="choice_main4">
+                <div class="choice_mainup4">
+                    <div class="coat13 "><img src="../images/main/8568473011156-5.jpg"/></div>
+                    <div class="coat14 "><img src="../images/main/f10d5fe6-4fe8-4b45-b344-6ef54c64c1c3_t.jpg"/></div>
+                    <div class="coat15 "><img src="../images/main/ERDOS-8350116423-5.jpg"/></div>
+                </div>
+                <div class="choice_maindown4">
+                    <div class="coat04"><img src="../images/main/17377721.png" style="width: 78px;height: 40px"/></div>
+                    <a href="#" class="btn btn-danger"><img src="../images/main/36020170213164150769.jpg" style="width: 20px;height: 20px"/>收藏</a>
+                    <a href="#" class="btn btn01">进入会场</a>
+                </div>
+            </div>
+            <div class="choice_name name05"><span class="name_a" style="font-size: 20px">GANE stroy</span><br/><sapn>经典故事</sapn><span><br/>满599减30</span></div>
+            <a href="#"></a>
+        </li>
+        <li class="choice06">
+            <div class="choice_main5">
+                <div class="choice_mainup5">
+                    <div class="coat16 "><img src="../images/main/1HY3340770304-5.jpg"/></div>
+                    <div class="coat17 "><img src="../images/main/1HY3341810650-5.jpg"/></div>
+                    <div class="coat18 "><img src="../images/main/ERDOS-8350116423-5.jpg"/></div>
+                </div>
+                <div class="choice_maindown5">
+                    <div class="coat04"><img src="../images/main/17377721.png" style="width: 78px;height: 40px"/></div>
+                    <a href="#" class="btn btn-danger"><img src="../images/main/36020170213164150769.jpg" style="width: 20px;height: 20px"/>收藏</a>
+                    <a href="#" class="btn btn01">进入会场</a>
+                </div>
+            </div>
+            <div class="choice_name name06"><span class="name_a" style="font-size: 20px">GANE stroy</span><br/><sapn>经典故事</sapn><span><br/>满599减30</span></div>
+            <a href="#"></a>
+        </li>
+    </ul>
+</div>
+<!--女装-->
+<div class="dress">
+    <div class="box"><span class="dress_name">女装品牌</span><span class="dress_eng">WEMEN'S FASHION</span></div>
+</div>
+
+<div class="women_dress">
+    <ul>
+        <li class="women_dress01">
+            <div class="fu_nav01">
+                <div class="tip01">
+                    <span>满498减100，上不封顶</span>
+                </div>
+            </div>
+            <span class="text"><span class="num">1.9</span>折起，欧芮儿女装专场</span>
+            <div class="time">
+                <a href="#"><img src="../images/main/5MLUBPHVLSC_7425F.jpg" alt=""/>剩2天</a>
+            </div>
+        </li>
+
+        <li class="women_dress02">
+            <div class="fu_nav02">
+                <span class="tip02">满498减100，上不封顶</span>
+            </div>
+            <span class="text"><span class="num">2</span>折起，韩都衣舍女装专场</span>
+            <div class="time">
+                <a href="#"><img src="../images/main/5MLUBPHVLSC_7425F.jpg" alt=""/>剩3天</a>
+            </div>
+        </li>
+        <li class="women_dress03">
+            <div class="fu_nav03">
+                <span class="tip03">满498减100，上不封顶</span>
+            </div>
+            <span class="text"><span class="num">3</span>折起，曼妮芬女装专场</span>
+            <div class="time">
+                <a href="#"><img src="../images/main/5MLUBPHVLSC_7425F.jpg" alt=""/>剩1天</a>
+            </div>
+        </li>
+        <li class="women_dress04">
+            <div class="fu_nav04">满999减200</div>
+            <span class="text"><span class="num">0.9</span> 折起，女装专场</span>
+            <div class="time">
+                <a href="#"><img src="../images/main/5MLUBPHVLSC_7425F.jpg" alt=""/>剩5天</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--底部-->
+<div class="bottom">
+    <div class="pho03"><img src="../images/main/QQ20170218161142.png"/></div>
+    <div class="text_bottom">
+        <div class="text_nav">
+            <ul>
+                <span class="title01">服务保障</span>
+                <li><a href="#">正品保证</a></li>
+                <li><a href="#">7天无理由放心退</a></li>
+                <li><a href="#">退货返运费</a></li>
+                <li><a href="#">7x15小时客户服务</a></li>
+            </ul>
+        </div>
+        <div class="text_nav">
+            <ul>
+                <span class="title01">购物指南</span>
+                <li><a href="#">导购演示</a></li>
+                <li><a href="#">订单操作</a></li>
+                <li><a href="#">会员注册</a></li>
+                <li><a href="#">账户管理</a></li>
+                <li><a href="#">收货样品</a></li>
+                <li><a href="#">会员等级</a></li>
+            </ul>
+        </div>
+        <div class="text_nav">
+            <ul>
+                <span class="title01">支付方式</span>
+                <li><a href="">快捷支付</a></li>
+                <li><a href="">23家主流网银支付</a></li>
+                <li><a href="">货到付款</a></li>
+                <li><a href="">支付宝、银联等支付</a></li>
+                <li><a href="">信用卡支付</a></li>
+                <li><a href="">唯品钱包支付</a></li>
+            </ul>
+        </div>
+        <div class="text_nav">
+            <ul>
+                <span class="title01">配送方式</span>
+                <li><a href="">全场满288元免运费</a></li>
+                <li><a href="">配送范围及运费</a></li>
+                <li><a href="">验货与签收</a></li>
+            </ul>
+        </div>
+        <div class="text_nav">
+            <ul>
+                <span class="title01">售后服务</span>
+                <li><a href="">退货政策</a></li>
+                <li><a href="">退货流程</a></li>
+                <li><a href="">退款方式和时效</a></li>
+            </ul>
+        </div>
+        <div class="text_code">
+            <span class="title01">唯品会APP二维码</span>
+            <img src="../images/main/QQ20170218161209.jpg" style="width: 110px;height: 110px;margin-left: 6px" />
+            <span>下载唯品会移动APP</span>
+        </div>
+    </div>
+    <div class="bottom_nav">
+        <ul>
+            <li><a href="#">关于我们|</a></li>
+            <li><a href="#">About us|</a></li>
+            <li><a href="#">Investor Relations|</a></li>
+            <li><a href="#">媒体报道|</a></li>
+            <li><a href="#">品牌招商|</a></li>
+            <li><a href="#">隐私条款|</a></li>
+            <li><a href="#">唯品诚聘|</a></li>
+            <li><a href="#">365爱心基金|</a></li>
+            <li><a href="#">唯品卡|</a></li>
+            <li><a href="#">唯品地图|</a></li>
+            <li><a href="#">品牌大全|</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="text_main">Copyright © 2008-2017 vip.com，All Rights Reserved  使用本网站即表示接受唯品会用户协议。版权所有 广州唯品会信息科技有限公司
+        粤公网安备 44010302111111号  粤ICP备08114786号 ICP经营许可证：粤B2-20080329 网络文化经营许可证：粤网文〔2015〕1528-229
+        自营主体的营业执照及食品流通许可证信息  互联网药品交易服务资格证（粤C20140002）</div>
+    <div class="pho04">
+        <img src="../images/main/QQ20170218161357.jpg"/>
+        <img src="../images/main/QQ20170218161403.jpg" />
+        <img src="../images/main/QQ20170218161410.jpg"/>
+        <img src="../images/main/QQ20170218161417.jpg" />
+        <img src="../images/main/QQ20170218161425.jpg" />
+        <img src="../images/main/QQ20170218161431.jpg" />
+        <img src="../images/main/QQ20170218161439.jpg" />
+    </div>
+</div>
+</body>
+</html>
